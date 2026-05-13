@@ -4,10 +4,29 @@
  */
 package CA_2;
 
-/**
- *
- * @author grazi
- */
-public class ManagerType {
-    
+
+public enum ManagerType {
+
+    HEAD_MANAGER("Head Manager"),
+    ASSISTANT_MANAGER("Assistant Manager"),
+    TEAM_LEAD("Team Lead");
+
+    // Human-readable label displayed in the console
+    private final String label;
+
+    /**
+     * Constructor for each manager type.
+     * @param label the display text shown in the terminal
+     */
+    ManagerType(String label) {
+        this.label = label;
+    }
+
+    /**
+     * Returns the display label for this manager type.
+     * @return the label string
+     */
+    public String getLabel() {
+        return label;
+    }
 }
